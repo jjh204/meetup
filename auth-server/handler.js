@@ -102,16 +102,15 @@ module.exports.getCalendarEvents = async (event) => {
   );
 
   const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
+  oAuth2Client.setCredentials({ access_token });
 
   return new Promise((resolve, reject) => {
-    oAuth2Client.setCredentials({ access_token });
-    calendar.events.list(
-      {
-        calendarId: calendar_id,
-        auth: oAuth2Client,
-        timeMin: new Date().toISOString(),
-        singleEvents: true,
-        orderBy: "startTime",
+    calendar.events.list({
+      calendarId: calendar_id,
+      auth: oAuth2Client,
+      timeMin: new Date().toISOString(),
+      singleEvents: true,
+      orderBy: "startTime",
       },
       (error, response) => {
         if (error) {
