@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Event extends Component {
   state = {
-    details: false
+    details: false,
   }
 
   handleDetails = () => {
@@ -20,17 +20,17 @@ class Event extends Component {
 
     return <div className="event">
       <div className="eventOverview">
-        <h1 className="summary">{this.props.event.summary}</h1>
-        <p className="startDate">{this.props.event.start}</p>
-        <p className="location">{this.props.event.location}</p>
+        <h1 className="summary">{event.summary}</h1>
+        <p className="startDate">{event.start.dateTime} | {event.start.timeZone}</p>
+        <p className="location">{event.location}</p>
         {!details && <button className="showDetails-btn" onClick={() => this.handleDetails()}>Show Details</button>}
         {details && <button className="hideDetails-btn" onClick={() => this.handleDetails()}>Hide Details</button>}
       </div>
       {details &&
         <div className="eventDetails">
           <h2 className="about">Event Details:</h2>
-          <p className="link"><a href={this.props.event.htmlLink} target="blank">Go to Google Calendar</a></p>
-          <p className="description">{this.props.event.description}</p>
+          <p className="link"><a href={event.htmlLink} target="blank">Go to Google Calendar</a></p>
+          <p className="description">{event.description}</p>
         </div>
       }
     </div>;

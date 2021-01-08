@@ -18,7 +18,7 @@ describe('<Event /> component', () => {
     expect(EventWrapper.find('.eventOverview')).toHaveLength(1);
   });
 
-  test('each event shows the correct overview overview information', () => {
+  test('each event shows the correct overview information', () => {
     expect(EventWrapper.find('.eventOverview').children()).toHaveLength(4);
   });
 
