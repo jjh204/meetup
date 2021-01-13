@@ -24,27 +24,31 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    number: 32
+    number: 32,
+    currentLocation: 'all'
   }
 
   updateEvents = (location, eventCount) => {
     getEvents().then((events) => {
-      const eventResult = (location === 'all') ?
-        events => events.length <= eventCount :
-        events.filter((event) => event.location === location) && events.length <= eventCount;
+      const eventResults = (location === 'all') ?
+        events.slice(0, eventCount) :
+        events.filter((event) => event.location === location).slice(0, eventCount);
 
       this.setState({
-        events: eventResult
+        events: eventResults,
+        currentLocation: location,
+        number: eventCount
       });
     });
   }
 
   render() {
+    const { locations, number, events, currentLocation } = this.state
     return (
       <div className="App">
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberEvents number={this.state.number} updateEvents={this.updateEvents} />
-        <EventList events={this.state.events} />
+        <CitySearch locations={locations} number={number} updateEvents={this.updateEvents} />
+        <NumberEvents currentLocation={currentLocation} number={number} updateEvents={this.updateEvents} />
+        <EventList events={events} />
       </div>
     );
   }
