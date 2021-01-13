@@ -25,7 +25,6 @@ class CitySearch extends Component {
       showSuggestions: false,
     });
     const number = this.props.number;
-    console.log(number);
     this.props.updateEvents(suggestion, number);
   }
 

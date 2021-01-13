@@ -12,7 +12,6 @@ class NumberEvents extends Component {
       number: value,
     });
     const location = this.props.currentLocation;
-    console.log(location);
     this.props.updateEvents(location, value);
   };
 
