@@ -88,33 +88,16 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
-  test('update events after user changes number of events', () => {
+  test('App displays event count correctly after user updates event count', async () => {
     const AppWrapper = mount(<App />);
-    AppWrapper.instance().updateEvents = jest.fn();
-    AppWrapper.instance().forceUpdate();
     const NumberEventsWrapper = AppWrapper.find(NumberEvents);
-    NumberEventsWrapper.instance().handleInputChanged({
-      target: { value: 1 },
-    });
-    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
-    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(location, 1);
-    AppWrapper.unmount();
-  });
-
-  test('change state after get list of events', async () => {
-    const AppWrapper = shallow(<App />);
-    AppWrapper.instance().updateEvents("");
-    await AppWrapper.update();
-    expect(await AppWrapper.state("events")).toEqual(mockEvents);
-    AppWrapper.unmount();
-  });
-
-  test('render correct list of events', () => {
-    const AppWrapper = mount(<App />);
-    AppWrapper.setState({
-      events: mockEvents,
-    });
-    expect(AppWrapper.find(".event")).toHaveLength(mockEvents.length);
+    NumberEventsWrapper.setState({ number: Math.floor(Math.random()) });
+    const number = NumberEventsWrapper.state('number');
+    const events = AppWrapper.state('events');
+    const defaultCount = events[number];
+    const allEvents = await getEvents();
+    const eventsToShow = allEvents.filter(event => event.length === defaultCount);
+    expect(AppWrapper.state('events')).toEqual(eventsToShow);
     AppWrapper.unmount();
   });
 });

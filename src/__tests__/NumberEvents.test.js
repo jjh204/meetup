@@ -6,7 +6,7 @@ describe('<NumberEvents /> component', () => {
 
   let NumberEventsWrapper;
   beforeAll(() => {
-    NumberEventsWrapper = shallow(<NumberEvents />);
+    NumberEventsWrapper = shallow(<NumberEvents updateEvents={() => { }} />);
   });
 
   test('render input label for number of events', () => {
@@ -24,11 +24,11 @@ describe('<NumberEvents /> component', () => {
 
   test('change state when text input changes', () => {
     NumberEventsWrapper.setState({
-      number: '24'
+      number: 24
     });
-    const eventObject = { target: { value: '32' } };
+    const eventObject = { target: { value: 32 } };
     NumberEventsWrapper.find('.numberInput').simulate('change', eventObject);
-    expect(NumberEventsWrapper.state('number')).toBe('32');
+    expect(NumberEventsWrapper.state('number')).toBe(32);
   });
 
 });
