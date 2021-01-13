@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'moment';
 
 class Event extends Component {
   state = {
@@ -17,19 +18,20 @@ class Event extends Component {
   render() {
     const details = this.state.details;
     const { summary, start, location, htmlLink, description } = this.props.event;
+    const startDate = Moment(start.dateTime).format('DD-MMMM-YYYY, h:mm a');
 
     return <div className="event">
       <div className="eventOverview">
         <h1 className="summary">{summary}</h1>
-        <p className="startDate">{start.dateTime} | {start.timeZone}</p>
-        <p className="location">{location}</p>
+        <p className="startDate">{startDate} (Central European Time)</p>
+        <p className="location">Location: {location}</p>
         {!details && <button className="showDetails-btn" onClick={() => this.handleDetails()}>Show Details</button>}
         {details && <button className="hideDetails-btn" onClick={() => this.handleDetails()}>Hide Details</button>}
       </div>
       {details &&
         <div className="eventDetails">
           <h2 className="about">Event Details:</h2>
-          <p className="link"><a href={htmlLink} target="blank">Go to Google Calendar</a></p>
+          <p className="link"><a href={htmlLink} target="blank">See Google Calendar Invite</a></p>
           <p className="description">{description}</p>
         </div>
       }
