@@ -17,7 +17,7 @@ class Event extends Component {
 
   render() {
     const details = this.state.details;
-    const { summary, start, location, htmlLink, description } = this.props.event;
+    const { summary, location, htmlLink, description, start } = this.props.event;
     const startDate = Moment(start.dateTime).format('DD-MMMM-YYYY, h:mm a');
 
     return <div className="event">
