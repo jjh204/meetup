@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Chewy&family=Lato&display=swap);
 
+
 body {
   font-family: 'Lato', sans-serif;
-  background: #f8fcf4;
+  background-image: url('http://www.zingerbugimages.com/backgrounds/light_green_bamboo_wallpaper_tileable.jpg');
 }
 
 .App {
