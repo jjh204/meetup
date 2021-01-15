@@ -22,7 +22,7 @@ class Event extends Component {
 
     return <div className="event">
       <div className="eventOverview">
-        <h1 className="summary">{summary}</h1>
+        <h2 className="summary">{summary}</h2>
         <p className="startDate">{startDate} (Central European Time)</p>
         <p className="location">Location: {location}</p>
         {!details && <button className="showDetails-btn" onClick={() => this.handleDetails()}>Show Details</button>}
