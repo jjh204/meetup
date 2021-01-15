@@ -2,6 +2,7 @@
 
 
 body {
+  color: #093951;
   font-family: 'Lato', sans-serif;
   background-image: url('http://www.zingerbugimages.com/backgrounds/light_green_bamboo_wallpaper_tileable.jpg');
 }
@@ -24,11 +25,13 @@ h1 {
   font-family: 'Chewy', cursive;
   font-size: 52px;
   color: #1a2f3d;
+  margin-bottom: 0;
 }
 
 h2 {
   font-family: 'Chewy', cursive;
   color: #1a2f3d;
+  margin-bottom: 30px;
 }
 
 p {
@@ -74,7 +77,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
+  top: 55px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -98,8 +101,8 @@ input[type="number"] {
 .event {
   background: #ebf7e0;
   padding: 10px 10px 35px;
-  margin-bottom: 10px;
   text-align: left;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
@@ -160,9 +163,14 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.Alert {
-  position: fixed;
-  top: 20px;
+.infoText {
+  position: absolute;
+  margin-top: 50px;
+}
+
+.errorText {
+  position: absolute;
+  margin-top: 10px;
 }
 
 .data-vis-wrapper {
