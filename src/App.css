@@ -1,4 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url(https://fonts.googleapis.com/css2?family=Chewy&family=Lato&display=swap);
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #f8fcf4;
+}
+
 .App {
   text-align: center;
   padding: 2% 5%;
@@ -11,6 +17,17 @@
 ul {
   padding: 0;
   list-style: none;
+}
+
+h1 {
+  font-family: 'Chewy', cursive;
+  font-size: 52px;
+  color: #1a2f3d;
+}
+
+h2 {
+  font-family: 'Chewy', cursive;
+  color: #1a2f3d;
 }
 
 p {
@@ -34,6 +51,7 @@ input[type="number"] {
   line-height: 20px;
   align-self: center;
   height: 38px;
+  background: #f8f9f7;
 }
 
 .city {
@@ -77,6 +95,7 @@ input[type="number"] {
 }
 
 .event {
+  background: #ebf7e0;
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
@@ -85,14 +104,26 @@ input[type="number"] {
   position: relative;
 }
 
-.details-btn {
+.showDetails-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 10px;
+  bottom: 10px;
   padding: 5px 8px;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  background: #bcdcdb;
+}
+
+.hideDetails-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background: #bcdcdb;
 }
 
 .name {
