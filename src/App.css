@@ -2,9 +2,11 @@
 
 
 body {
-  color: #093951;
+  color: #0a0f17;
   font-family: 'Lato', sans-serif;
-  background-image: url('http://www.zingerbugimages.com/backgrounds/light_green_bamboo_wallpaper_tileable.jpg');
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 
 .App {
@@ -24,18 +26,32 @@ ul {
 h1 {
   font-family: 'Chewy', cursive;
   font-size: 52px;
-  color: #1a2f3d;
+  color: #1b253a;
   margin-bottom: 0;
 }
 
 h2 {
   font-family: 'Chewy', cursive;
-  color: #1a2f3d;
-  margin-bottom: 30px;
+  color: #e58d9c;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 22px;
+  color: #1b253a;
 }
 
 p {
   margin: 5px 0;
+}
+
+a {
+  color: #f2c6cd;
+}
+
+a:hover {
+  color: #f7dce1;
 }
 
 .display-none {
@@ -55,7 +71,7 @@ input[type="number"] {
   line-height: 20px;
   align-self: center;
   height: 38px;
-  background: #f8f9f7;
+  background: #d6dbe3;
 }
 
 .city {
@@ -95,11 +111,12 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: #aeb7c7;
 }
 
 .event {
-  background: #ebf7e0;
+  background: #364b75;
+  color: #ecafb9;
   padding: 10px 10px 35px;
   text-align: left;
   margin-bottom: 10px;
@@ -116,7 +133,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  background: #bcdcdb;
+  background: #e58d9c;
 }
 
 .hideDetails-btn {
@@ -127,7 +144,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  background: #bcdcdb;
+  background: #e58d9c;
 }
 
 .name {

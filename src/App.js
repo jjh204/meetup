@@ -46,8 +46,8 @@ class App extends Component {
     const { locations, number, events, currentLocation } = this.state
     return (
       <div className="App">
-        <h1>SOCIALIZE!</h1>
-        <h2>events for the social coder</h2>
+        <h1>MEET AND SOCIAL</h1>
+        <h3>events for the social coder</h3>
         <CitySearch locations={locations} number={number} updateEvents={this.updateEvents} />
         <NumberEvents currentLocation={currentLocation} number={number} updateEvents={this.updateEvents} />
         <EventList events={events} />
