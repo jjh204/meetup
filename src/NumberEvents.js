@@ -17,7 +17,7 @@ class NumberEvents extends Component {
     this.props.updateEvents(location, value);
 
     if (value < 1 || value > 32) {
-      this.setState({ errorText: 'select number from 1 to 32' });
+      this.setState({ errorText: 'number must be selected' });
     } else {
       this.setState({ errorText: '' });
     }
