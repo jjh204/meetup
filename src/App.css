@@ -4,9 +4,7 @@
 body {
   color: #0a0f17;
   font-family: 'Lato', sans-serif;
-  background-image: url('./img/background.jpg');
-  background-size: cover;
-  background-repeat:no-repeat;
+  background-color: #fcf3f5;
 }
 
 .App {

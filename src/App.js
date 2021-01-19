@@ -5,6 +5,7 @@ import CitySearch from './CitySearch';
 import NumberEvents from './NumberEvents';
 import { extractLocations, getEvents } from './api';
 import './nprogress.css';
+import BackGround from './img/background.jpg';
 
 class App extends Component {
 
@@ -45,13 +46,15 @@ class App extends Component {
   render() {
     const { locations, number, events, currentLocation } = this.state
     return (
-      <div className="App">
-        <h1>MEET AND SOCIAL</h1>
-        <h3>events for the social coder</h3>
-        <CitySearch locations={locations} number={number} updateEvents={this.updateEvents} />
-        <NumberEvents currentLocation={currentLocation} number={number} updateEvents={this.updateEvents} />
-        <EventList events={events} />
-      </div>
+      <body style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', minHeight: '1200px' }}>
+        <div className="App">
+          <h1>MEET AND SOCIAL</h1>
+          <h3>events for the social coder</h3>
+          <CitySearch locations={locations} number={number} updateEvents={this.updateEvents} />
+          <NumberEvents currentLocation={currentLocation} number={number} updateEvents={this.updateEvents} />
+          <EventList events={events} />
+        </div>
+      </body>
     );
   }
 }
