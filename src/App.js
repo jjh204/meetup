@@ -8,6 +8,9 @@ import { extractLocations, getEvents } from './api';
 import './nprogress.css';
 import BackGround from './img/background.jpg';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 class App extends Component {
 
@@ -59,12 +62,22 @@ class App extends Component {
     const { locations, number, events, currentLocation } = this.state
     return (
       <div style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', minHeight: '1200px' }}>
+        <Navbar collapseOnSelect expand="lg" bg="custom" variant="custom" className="fixed-top navbar-main">
+          <Navbar.Brand href="https://jjh204.github.io/meetup/" className="navbar-brand">Meet & Social</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link href="https://jjh204.github.io/portfolio-website" target="_blank" className="navbar-link">Developer Portfolio</Nav.Link>
+              <Nav.Link href="https://github.com/jjh204" target="_blank" className="navbar-link">GitHub</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
         <div className="App">
-          <h1>MEET AND SOCIAL</h1>
+          <h1>MEET & SOCIAL</h1>
           <h3>Events for the Social Coder</h3>
           <CitySearch locations={locations} number={number} updateEvents={this.updateEvents} />
           <NumberEvents currentLocation={currentLocation} number={number} updateEvents={this.updateEvents} />
-          <h3 className="dataTitle">Data display of Events per Genre and City:</h3>
+          <h3 className="dataTitle">Display of Events per Genre and City:</h3>
           <div className="data-vis-wrapper">
             <EventGenre events={events} />
             <ResponsiveContainer height={400} >
