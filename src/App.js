@@ -62,13 +62,13 @@ class App extends Component {
     const { locations, number, events, currentLocation } = this.state
     return (
       <div style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', minHeight: '1200px' }}>
-        <Navbar collapseOnSelect expand="lg" bg="custom" variant="custom" className="fixed-top navbar-main">
-          <Navbar.Brand href="https://jjh204.github.io/meetup/" className="navbar-brand">Meet & Social</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" bg="custom" variant="dark" className="fixed-top navbar-main">
+          <Navbar.Brand href="https://jjh204.github.io/meetup/" className="navbar-brand" style={{ color: '#e58d9c' }} >Meet & Social</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="https://jjh204.github.io/portfolio-website" target="_blank" className="navbar-link">Developer Portfolio</Nav.Link>
-              <Nav.Link href="https://github.com/jjh204" target="_blank" className="navbar-link">GitHub</Nav.Link>
+              <Nav.Link href="https://jjh204.github.io/portfolio-website" target="_blank" className="navbar-link" style={{ color: '#e58d9c' }}>Developer Portfolio</Nav.Link>
+              <Nav.Link href="https://github.com/jjh204" target="_blank" className="navbar-link" style={{ color: '#e58d9c' }}>GitHub</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
