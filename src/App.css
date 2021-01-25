@@ -8,6 +8,7 @@ body {
 }
 
 .App {
+  margin-top: 50px;
   text-align: center;
   padding: 2% 5%;
 }
@@ -42,14 +43,6 @@ h3 {
 
 p {
   margin: 5px 0;
-}
-
-a {
-  color: #f2c6cd;
-}
-
-a:hover {
-  color: #f7dce1;
 }
 
 .dataTitle {
@@ -116,6 +109,28 @@ input[type="number"] {
   background-color: #aeb7c7;
 }
 
+.navbar-brand {
+  font-family: 'Chewy', cursive;
+  color: #e58d9c;
+}
+
+.navbar-brand:hover {
+  color: #ecafb9;
+}
+
+.navbar-main {
+  background: #1b253a;
+}
+
+.navbar-link {
+  margin-left: 40px;
+  color: #e58d9c;
+}
+
+.navbar-link:hover {
+  color: #ecafb9;
+}
+
 .event {
   background: #364b75;
   color: #ecafb9;
@@ -125,6 +140,10 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+}
+
+.about {
+  font-size: 20px;
 }
 
 .showDetails-btn {
