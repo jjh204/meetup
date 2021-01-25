@@ -31,8 +31,8 @@ class Event extends Component {
       {details &&
         <div className="eventDetails">
           <h2 className="about">Event Details:</h2>
-          <p className="link"><a href={htmlLink} target="blank">See Google Calendar Invite</a></p>
           <p className="description">{description}</p>
+          <p className="link"><a href={htmlLink} target="blank" style={{ color: '#f7dce1' }}>See Google Calendar Invite</a></p>
         </div>
       }
     </div>;
