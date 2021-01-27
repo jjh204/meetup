@@ -67,8 +67,8 @@ class App extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="https://jjh204.github.io/portfolio-website" target="_blank" className="navbar-link" style={{ color: '#e58d9c' }}>Developer Portfolio</Nav.Link>
-              <Nav.Link href="https://github.com/jjh204" target="_blank" className="navbar-link" style={{ color: '#e58d9c' }}>GitHub</Nav.Link>
+              <Nav.Link href="https://jjh204.github.io/portfolio-website" target="_blank" rel="noopener" className="navbar-link" style={{ color: '#e58d9c' }}>Developer Portfolio</Nav.Link>
+              <Nav.Link href="https://github.com/jjh204" target="_blank" rel="noopener" className="navbar-link" style={{ color: '#e58d9c' }}>GitHub</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
