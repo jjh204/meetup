@@ -77,7 +77,6 @@ class App extends Component {
           <h3>Events for the Social Coder</h3>
           <CitySearch locations={locations} number={number} updateEvents={this.updateEvents} />
           <NumberEvents currentLocation={currentLocation} number={number} updateEvents={this.updateEvents} />
-          <h3 className="dataTitle">Display of Events per Genre and City:</h3>
           <div className="data-vis-wrapper">
             <EventGenre events={events} />
             <ResponsiveContainer height={400} >
