@@ -6,7 +6,7 @@ import NumberEvents from './NumberEvents';
 import EventGenre from './EventGenre';
 import { extractLocations, getEvents } from './api';
 import './nprogress.css';
-import BackGround from './img/background.jpg';
+
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
@@ -61,7 +61,7 @@ class App extends Component {
   render() {
     const { locations, number, events, currentLocation } = this.state
     return (
-      <div style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', minHeight: '1200px' }}>
+      <div>
         <Navbar collapseOnSelect expand="lg" bg="custom" variant="dark" className="fixed-top navbar-main">
           <Navbar.Brand href="https://jjh204.github.io/meetup/" className="navbar-brand" style={{ color: '#e58d9c' }} >Meet & Social</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -4,7 +4,6 @@
 body {
   color: #0a0f17;
   font-family: 'Lato', sans-serif;
-  background-color: #fcf3f5;
 }
 
 .App {
@@ -25,7 +24,7 @@ ul {
 h1 {
   font-family: 'Chewy', cursive;
   font-size: 52px;
-  color: #1b253a;
+  color: #364b75;
   margin-bottom: 0;
 }
 
@@ -38,7 +37,7 @@ h2 {
 h3 {
   font-family: 'Chewy', cursive;
   font-size: 22px;
-  color: #1b253a;
+  color: #364b75;
 }
 
 p {
@@ -119,7 +118,7 @@ input[type="number"] {
 }
 
 .navbar-main {
-  background: #1b253a;
+  background: #364b75;
 }
 
 .navbar-link {
